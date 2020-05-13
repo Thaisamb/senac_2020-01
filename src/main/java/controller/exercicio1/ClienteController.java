@@ -30,11 +30,11 @@ public class ClienteController {
 			msg = verificarCampo("Nome", nome, TAMANHO_MINIMO_CAMPO_NOME, TAMANHO_MAXIMO_CAMPO_NOME);
 			msg += verificarCampo("Sobrenome", sobrenome, TAMANHO_MINIMO_CAMPO_SOBRENOME, TAMANHO_MAXIMO_CAMPO_SOBRENOME);
 			if(cpf.equals("   .   .   -  ") || cpf.length() <14) {
-				msg+= "O campo CPF deve possuir 11 números.";
+				msg+= "O campo CPF deve possuir 11 nï¿½meros.";
 			};
 
 		} else {
-			msg = "Informe um endereço.";
+			msg = "Informe um endereï¿½o.";
 		}
 
 		if (msg.isEmpty()) {
@@ -48,7 +48,7 @@ public class ClienteController {
 		String msg = "";
 
 		if(cpf.equals("   .   .   -  ") || cpf.length() <14) {
-			msg = "O campo CPF deve possuir 11 números.";
+			msg = "O campo CPF deve possuir 11 nï¿½meros.";
 		}else {
 			msg = bo.excluirPorCpf(cpf);
 		}
@@ -60,7 +60,7 @@ public class ClienteController {
 		String msgValidacao = "";
 
 		if (valor.length() < tamanhoMinimo || valor.length() > tamanhoMaximo) {
-			msgValidacao = nomeDoCampo + " deve possuir pelo menos " + tamanhoMinimo + " e no máximo " + tamanhoMaximo
+			msgValidacao = nomeDoCampo + " deve possuir pelo menos " + tamanhoMinimo + " e no mï¿½ximo " + tamanhoMaximo
 					+ " caracteres \n";
 		}
 		return msgValidacao;
